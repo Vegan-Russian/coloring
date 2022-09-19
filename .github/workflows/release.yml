@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install dependencies and build
+        run: |
+          npm ci && npm run minify
+      - name: Install zip
+        uses: montudor/action-zip@0852c26906e00f8a315c704958823928d8018b28
+      - name: Create an archive with a build
+        run: cd ./dist && zip -qq -r dist.zip . && mv ./dist.zip ..
+      - name: Bump version and push tag
+        id: tag
+        uses: anothrNick/github-tag-action@37ff4873ee1e9b43cb25a7817cb15b2128536b84
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+      - name: Create release
+        uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5
+        with:
+          tag_name: ${{ steps.tag.outputs.new_tag }}
+          files: dist.zip
