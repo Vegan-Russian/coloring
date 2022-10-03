@@ -22,11 +22,6 @@
         left: 0;
     }
 
-    @include media("lg", "min") {
-        &__content {
-            gap: 82px 96px;
-        }
-    }
     @include media("lg") {
         &__title {
             margin-bottom: 75px;
@@ -44,6 +39,12 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 94px 30px;
+        }
+    }
+
+    @include media("lg", "min") {
+        &__content {
+            gap: 82px 96px;
         }
     }
 

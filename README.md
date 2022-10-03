@@ -1,3 +1,5 @@
+### Деплой доступен [по ссылке](https://lefhl.github.io/coloring/), [дизайн-макет](https://www.figma.com/file/shS9FR3tXzHwU0T5Gy1w01/%D0%9B%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3-coloring.veganrussian.ru?node-id=148%3A59)
+
 ## Структура проекта
 
 ```

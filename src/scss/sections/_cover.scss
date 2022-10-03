@@ -26,14 +26,14 @@
     }
 
     &__page {
-        animation: appear-top 1.5s ease forwards;
+        animation: appear-top 1.2s ease forwards;
 
         &--left img {
-            animation: appear-left 1.5s ease forwards;
+            animation: appear-left 1.2s ease forwards;
         }
 
         &--right img {
-            animation: appear-right 1.5s ease forwards;
+            animation: appear-right 1.2s ease forwards;
         }
     }
 

@@ -87,7 +87,7 @@
     }
 
     @include media(1400) {
-        --bottom-gap: 60px;
+        --bottom-gap: 190px;
 
         &__drawing-pencil-mobile {
             position: absolute;
@@ -102,6 +102,10 @@
             right: -80px;
             bottom: -180px;
         }
+    }
+
+    @include media(1024) {
+        --bottom-gap: 60px;
     }
 
     @include media("lg") {

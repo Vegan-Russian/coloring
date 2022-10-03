@@ -50,6 +50,7 @@
         color: var(--gray-color);
         text-decoration: underline;
         font-size: var(--large-text-fs);
+        width: max-content;
     }
 
     &__title {
@@ -99,6 +100,7 @@
         margin: auto;
         width: max-content;
         height: max-content;
+        pointer-events: none;
     }
 
     @include media(1400) {

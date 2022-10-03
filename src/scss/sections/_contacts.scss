@@ -11,7 +11,7 @@
 
     &__rainbow {
         path[fill] {
-            transition: opacity 0.3s ease 2s;
+            transition: opacity 0.3s ease 1.2s;
         }
         &.observed path[fill] {
             opacity: 0;
