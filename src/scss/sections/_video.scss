@@ -12,10 +12,15 @@
 
     &__bg-wrapper {
         position: absolute;
+        visibility: visible !important;
         @include inset;
         right: -31px;
-        will-change: scroll-position;
-        filter: drop-shadow(0px 0px 40px rgba(162, 81, 120, 0.5));
+        transition: filter 0.7s ease;
+        filter: drop-shadow(0px 0px 1px rgba(162, 81, 120, 0.5));
+
+        &.visible {
+            filter: drop-shadow(0px 0px 40px rgba(162, 81, 120, 0.5));
+        }
     }
 
     &__bg {

@@ -41,8 +41,8 @@ function handleBurgerMenuLogic() {
   }
 }
 
-function animateItems(classToWatch) {
-  let options = {
+function animateItems(classToWatch, customSettings = null) {
+  let options = customSettings ?? {
     root: null,
     rootMargin: "0px",
     threshold: 0.5,
@@ -96,6 +96,10 @@ window.onload = () => {
 
   handleBurgerMenuLogic();
   animateItems(".observed");
+  animateItems(".video-bg", {
+    root: null,
+    rootMargin: "0px",
+  });
 
   const media = window.matchMedia("(max-width: 1023.5px)");
 
