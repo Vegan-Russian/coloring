@@ -68,6 +68,7 @@
     @include media("sm") {
         &__wrapper {
             margin-bottom: 72px;
+            
             img {
                 width: 100px;
             }
@@ -87,7 +88,11 @@
         }
 
         &__link-item {
-            font-weight: 600;
+            font-weight: 700px;
+        }
+
+        &__menu-link {
+            font-weight: bold;
         }
     }
 }

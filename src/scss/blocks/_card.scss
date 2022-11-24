@@ -1,15 +1,17 @@
 .card {
     --circle-size: 120px;
 
-    border: 3px solid var(--purple-color);
+    
     padding: 28px 32px;
-    border-radius: 10px;
+    
     position: relative;
     width: max-content;
     text-align: center;
     background-color: #fff;
     z-index: 1;
     transition: opacity 0.3s 0.5s;
+    box-shadow: 2px 4px 30px rgba(54, 54, 54, 0.2);
+    border-radius: 4px;
 
     &.observed {
         opacity: 0;
@@ -30,6 +32,7 @@
 
     &__author {
         margin-bottom: 16px;
+        
     }
 
     &__name {
@@ -72,6 +75,8 @@
 
     @include media("sm") {
         border-width: 1px;
+        box-shadow: 2px 2px 15px rgba(54, 54, 54, 0.2);
+        border-radius: 4px;
         &__icon {
             top: -15px;
             right: -10px;

@@ -15,6 +15,7 @@
 
     &__book-item {
         position: relative;
+        filter: drop-shadow(4px 8px 30px rgba(54, 54, 54, 0.2));
     }
 
     &__image-wrapper {
@@ -30,10 +31,12 @@
 
         &--left img {
             animation: appear-left 1.2s ease forwards;
+            filter: drop-shadow(2px 4px 30px rgba(54, 54, 54, 0.2));
         }
 
         &--right img {
             animation: appear-right 1.2s ease forwards;
+            filter: drop-shadow(2px 4px 30px rgba(54, 54, 54, 0.2));
         }
     }
 
@@ -150,6 +153,10 @@
         --page-shift-x: 95px;
         --filled-rhomb-y-shift: -100px;
         --filled-rhomb-x-shift: 120px;
+
+        &__book-item {
+            filter: drop-shadow(2px 2px 15px rgba(54, 54, 54, 0.2));
+        }
 
         &__btn {
             padding-inline: 39.5px;

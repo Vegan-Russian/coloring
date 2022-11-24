@@ -1,7 +1,7 @@
 .burger {
     @include circle(var(--header-height));
     background: #ffffff;
-    box-shadow: 2px 4px 12px 2px rgba(255, 255, 255, 0.35);
+    
     display: flex;
     align-items: center;
     justify-content: center;

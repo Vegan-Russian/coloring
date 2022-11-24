@@ -16,10 +16,10 @@
         @include inset;
         right: -31px;
         transition: filter 0.7s ease;
-        filter: drop-shadow(0px 0px 1px rgba(162, 81, 120, 0.5));
+        
 
         &.visible {
-            filter: drop-shadow(0px 0px 40px rgba(162, 81, 120, 0.5));
+            
         }
     }
 
@@ -214,7 +214,7 @@
 
     @include media("sm") {
         &__bg-wrapper {
-            filter: drop-shadow(0px 0px 30px rgba(161, 81, 120, 0.5));
+            
         }
 
         &__inner {
