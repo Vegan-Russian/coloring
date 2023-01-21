@@ -74,6 +74,7 @@ function animateItems(classToWatch, customSettings = null) {
 }
 
 let slider = null;
+let reviewSlider = null;
 
 function createSliderForMobile(e) {
   if (e && e.matches) {
@@ -91,6 +92,22 @@ function createSliderForMobile(e) {
   }
 }
 
+function createSliderForReviews(e, slidesCount = 2) {
+  if (reviewSlider) {
+    reviewSlider.destroy(true, true);
+  }
+
+  reviewSlider = new Swiper(".swiper-reviews", {
+    modules: [Pagination],
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    spaceBetween: 32,
+    slidesPerView: slidesCount,
+  });
+}
+
 window.onload = () => {
   document.body.classList.remove("transition-lock");
 
@@ -102,9 +119,18 @@ window.onload = () => {
   });
 
   const media = window.matchMedia("(max-width: 1023.5px)");
+  const media2 = window.matchMedia("(max-width: 900px)");
+
+  if (media2.matches) {
+    createSliderForReviews(media, 1);
+  } else {
+    createSliderForReviews(media);
+  }
 
   if (media.matches) {
     createSliderForMobile(media);
   }
+
   media.addEventListener("change", createSliderForMobile);
+  media2.addEventListener("change", createSliderForReviews);
 };

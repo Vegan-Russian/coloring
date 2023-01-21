@@ -16,10 +16,10 @@
         @include inset;
         right: -31px;
         transition: filter 0.7s ease;
-        
+
 
         &.visible {
-            
+
         }
     }
 
@@ -214,7 +214,7 @@
 
     @include media("sm") {
         &__bg-wrapper {
-            
+
         }
 
         &__inner {

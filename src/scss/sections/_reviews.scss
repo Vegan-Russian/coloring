@@ -1,0 +1,319 @@
+.reviews {
+    position: relative;
+    margin-bottom: 190px;
+    margin-top: 36px;
+
+    &__review-card {
+        width: 784px;
+        height: 420px;
+        background-color: var(--light-pink-color);
+        padding: 32px;
+        margin-right: 30px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .swiper-wrapper {
+        height: 420px;
+    }
+
+    .swiper-reviews {
+        height: 464px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    &__title-section {
+        display: flex;
+        align-items: center;
+    }
+
+    &__review-card__header {
+        display: flex;
+        min-height: 85px;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+
+    &__review-photo {
+        height: 85px;
+        width: 85px;
+        display: inline-flex;
+        margin-left: 28px;
+
+    }
+
+    &__review-photos {
+        max-height: 52px;
+    }
+
+    &__review-author {
+        margin-right: auto;
+        width: 400px;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 130%;
+    }
+
+    &__bg-wrap {
+        position: absolute;
+        @include inset;
+        z-index: -1;
+        transition: opacity 0.5s;
+        opacity: 1;
+
+        &.observed {
+            opacity: 0;
+        }
+    }
+
+    &__text-content {
+        display: flex;
+        font-weight: 600;
+    }
+
+    &__bg {
+        position: absolute;
+        @include inset;
+        background-color: var(--light-blue-color);
+        clip-path: url(#reviews-bg-clip-path);
+    }
+
+    &__inner {
+        padding-top: calc(
+            var(--header-shift) + var(--header-height) +
+            var(--reviews-content-shift)
+        );
+        margin-bottom: 75px;
+    }
+
+    &__back-in-left {
+        visibility: hidden;
+        @extend .back-in-left;
+    }
+
+    &__button {
+        width: 376px;
+        height: 88px;
+        display: block;
+    }
+
+    &__button_mobile {
+        display: none;
+        width: 191px;
+        height: 48px;
+        font-size: 18px;
+        margin: auto;
+        text-align: center;
+        line-height: 140%;
+        padding: 11px;
+        font-weight: 700;
+    }
+
+    &__link {
+        display: block;
+        color: var(--gray-color);
+        text-decoration: underline;
+        font-size: var(--large-text-fs);
+        width: max-content;
+    }
+
+    &__title {
+        white-space: nowrap;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    &__text {
+        margin-bottom: 72px;
+    }
+
+    &__content {
+        display: flex;
+        gap: 32px;
+        position: relative;
+    }
+
+    &__lamb-wrapper {
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    &__lamb {
+        width: 100%;
+    }
+
+    &__heart-1 {
+        position: absolute;
+        left: 0;
+        top: -43px;
+        transform: translateY(-100%);
+        width: max-content;
+        height: max-content;
+    }
+
+    &__heart-2 {
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+
+    &__spiral {
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 30px;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        pointer-events: none;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .swiper-pagination-bullet {
+        @include circle(10px);
+        border: 1px solid var(--purple-color);
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            @include inset(-4px);
+        }
+
+        &-active {
+            background-color: var(--purple-color);
+            pointer-events: none;
+        }
+    }
+
+    @include media(1600) {
+        margin-bottom: 120px;
+        margin-top: 62px;
+
+        &__review-card {
+            height: 352px;
+        }
+
+        &__review-photos {
+            max-height: 52px;
+        }
+
+        &__review-author {
+            font-size: 34px;
+            width: 310px;
+        }
+
+        &__review-card__header {
+            min-height: 52px;
+        }
+
+        &__review-photo {
+            max-height: 52px;
+            max-width: 52px;
+            margin-left: 16px;
+        }
+
+        &__button {
+            width: 289px;
+            height: 60px;
+            font-size: 20px;
+            display: flex;
+        }
+
+        .swiper-wrapper {
+            height: 352px;
+        }
+
+        .swiper-reviews {
+            height: 416px;
+            overflow: hidden;
+        }
+    }
+
+    @include media(1250) {
+        margin-bottom: 120px;
+        margin-top: 62px;
+
+        &__review-card {
+            height: 352px;
+        }
+
+        &__review-photos {
+            max-height: 52px;
+        }
+
+        &__review-author {
+            font-size: 24px;
+            width: 190px;
+        }
+
+        &__review-card__content-text {
+            font-size: 18px;
+        }
+
+        &__review-card__header {
+            min-height: 52px;
+        }
+
+        &__review-photo {
+            max-height: 52px;
+            max-width: 52px;
+            margin-left: 16px;
+        }
+
+        &__button {
+            width: 289px;
+            height: 60px;
+            font-size: 20px;
+            display: flex;
+        }
+    }
+
+    @include media("sm") {
+        &__button {
+            display: none;
+        }
+
+        &__button_mobile {
+            margin-top: 14px;
+            display: block;
+        }
+
+        &__review-author {
+            font-size: 18px;
+            width: 100px;
+        }
+
+        &__review-card__content-text {
+            font-size: 16px;
+        }
+
+        &__review-card {
+            padding: 16px;
+        }
+
+        &__review-photo {
+            margin-left: 8px;
+        }
+
+        &__inner {
+            margin-top: 110px;
+            margin-bottom: 36px;
+        }
+    }
+}
