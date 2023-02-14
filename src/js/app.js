@@ -1,6 +1,7 @@
 import "swiper/css";
+import "swiper/css/navigation";
 import "../scss/style.scss";
-import Swiper, { Pagination } from "swiper";
+import Swiper, { Navigation, Pagination } from "swiper";
 
 function lockScroll(needToLock = true) {
   if (needToLock) {
@@ -98,10 +99,17 @@ function createSliderForReviews(e, slidesCount = 2) {
   }
 
   reviewSlider = new Swiper(".swiper-reviews", {
-    modules: [Pagination],
+    // cssMode: true,
+    // effect: "flip",
+    // simulateTouch: false,
+    modules: [Pagination, Navigation],
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     spaceBetween: 32,
     slidesPerView: slidesCount,

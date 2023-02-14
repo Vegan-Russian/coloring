@@ -22,8 +22,8 @@
     --delay: 0s;
     --speed: 3.5s;
 
-    --wrapper-gap: 80px;
-    --wrapper-width: 1600px;
+    --wrapper-gap: 160px;
+    --wrapper-width: 1630px;
 
     @include media(1750) {
         --header-shift: 50px;
@@ -31,10 +31,10 @@
         --promo-content-shift: 155px;
     }
 
-    @include media(1600) {
+    @include media(1630) {
         --h1-fs: 56px;
         --h2-fs: 40px;
-        --large-text-fs: 24px;
+        --large-text-fs: 23px;
         --text-fs: 20px;
         --small-text-fs: 16px;
     }

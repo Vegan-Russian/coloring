@@ -14,7 +14,7 @@
 
     &__links {
         display: flex;
-        gap: 41px;
+        gap: 40px;
     }
 
     &__wrapper {
@@ -77,12 +77,12 @@
         }
     }
 
-    @include media(1600) {
+    @include media(1630) {
         &__btn-bg img {
             width: auto;
         }
         &__menu {
-            gap: 80px;
+            gap: 100px;
         }
     }
 
@@ -94,6 +94,10 @@
     }
 
     @include media("lg") {
+        &__btn-bg img {
+            height: 200px;
+        }
+
         &__menu {
             gap: 140px;
         }
@@ -101,6 +105,22 @@
         &__links {
             flex-grow: 1;
             justify-content: space-between;
+        }
+    }
+
+    @include media(1200) {
+        &__btn-bg img {
+            height: 180px;
+        }
+
+        &__menu {
+            gap: 140px;
+        }
+
+        &__links {
+            flex-grow: 1;
+            justify-content: space-between;
+            gap: 25px;
         }
     }
 
