@@ -347,4 +347,12 @@
             margin-bottom: 36px;
         }
     }
+
+    @include media("xxs") {
+        &__review-photo {
+            max-height: 40px;
+            max-width: 40px;
+            margin-left: 6px;
+        }
+    }
 }
