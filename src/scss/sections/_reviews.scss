@@ -77,6 +77,7 @@
         position: relative;
         display: flex;
         font-weight: 600;
+        margin-bottom: 40px;
     }
 
     &__bg {
@@ -282,6 +283,7 @@
 
         &__review-card {
             height: 352px;
+            padding: 25px;
         }
 
         &__review-photos {
@@ -298,7 +300,9 @@
         }
 
         &__review-card__header {
-            min-height: 52px;
+            min-height: 63px;
+            margin-bottom: 16px;
+
         }
 
         &__review-photo {
@@ -349,10 +353,31 @@
     }
 
     @include media("xxs") {
+        &__review-card {
+            height: 470px;
+        }
+
         &__review-photo {
             max-height: 40px;
             max-width: 40px;
             margin-left: 6px;
+        }
+
+        .swiper-reviews {
+            height: 500px;
+        }
+
+        .swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding-top: 137px;
+            padding-bottom: 34px;
+        }
+
+        &__button_mobile {
+            margin-top: 14px;
         }
     }
 }
